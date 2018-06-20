@@ -1,4 +1,5 @@
-(defpackage #:tenis
+(defpackage #:pong
   (:use #:common-lisp
         #:alexandria
-        #:iter))
+        #:iter)
+  (:shadow #:position))
