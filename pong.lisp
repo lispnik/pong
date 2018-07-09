@@ -115,7 +115,9 @@
 
 (defun main ()
   (sdl2:with-init (:everything)
-    (sdl2:with-window (window :title "Pong" :w *game-width* :h *game-height* :flags '(:shown))
+    (sdl2:with-window (window :title "Pong" :w *world-width* :h *world-height* :flags '(:shown))
+      (sdl2:hide-window window)
+      (sdl2:show-window window)
       (sdl2:with-renderer (renderer window)
         (sdl2:set-render-draw-color renderer 255 255 255 0)
         (sdl2:render-clear renderer)
